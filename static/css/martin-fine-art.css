@@ -1,0 +1,91 @@
+/*    <!-- The Art Crive Archive styles -->  */
+
+body{
+  background-color: white;  
+ }
+.banner{
+
+ }
+ .logo img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.painting {
+  float: right;
+  margin: 10px;
+  padding: 0px;
+/*  background: #eee;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; */
+ }
+.signed-in{
+  color: #666;
+ }
+a.sign-out{
+  color: #333;
+ }
+a.sign-in{
+  color: black;
+ }
+div[class*="side-bar"]{
+  margin: 10px;
+  padding: 4px;
+  min-height: 350px;
+  color: #333;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 12px;
+
+  border-style:solid; 
+  border-width: 1px;
+  border-radius: 0px;
+  border-color: #888;
+  }
+.left-side-bar {
+  margin-left: 20px;
+ }
+.right-side-bar {
+  margin-right: 20px;
+ }
+.center-stage {
+  padding: 10px;
+ }
+.below-video{
+  border-bottom: solid; 
+  border-width: 1px;
+  border-color: #888;
+ }
+.description-box{
+
+}
+.description-box h1, h2, h3{
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+
+}
+.description-box p{
+  color: #333;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.tags {
+  color: #000;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.user {
+  color: #000;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.comments{
+  color: #333;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 12px;
+}
