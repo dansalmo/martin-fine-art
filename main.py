@@ -25,57 +25,18 @@ def innerHTML(file, tag):
   tree = html.parse(file)
   return ''.join([tostring(child) for child in tree.xpath(tag)[0].iterchildren()])
 
-#incomplete
-def LogIn():
-    user = users.get_current_user()
-    if user:
-        greeting = ("<div class=\"signed-in\"> %s <a class=\"sign-out\" href=\"%s\">(sign out)</a></div>" %
-                    (user.nickname(), users.create_logout_url("/")))
-        template_values = {
-                'greeting': greeting,
-                'user': user.nickname(),
-                }
-    else:
-        greeting = ("<a class=\"sign-in\" href=\"%s\">Sign in or register</a>" %
-                    users.create_login_url("/"))
-        template_values = {
-                'greeting': greeting,
-                }
-    return
-
-class MainPage(webapp2.RequestHandler):
+class GetPage(webapp2.RequestHandler):
     def get(self):
-  
+        if self.request.path == '/':
+          return self.redirect('/home')
+
+        page = self.request.path[1:]
         template_values = {
-                'content': innerHTML('main-page.html', 'body'),
-                'content_id': self.request.path[1:],
+                'content': innerHTML(page + '.html', 'body'),
+                'content_id': page,
                 }
 
         path = os.path.join(os.path.dirname(__file__), 'index-template.html' )
-        self.response.out.write(template.render(path, template_values))
-
-class AboutPage(webapp2.RequestHandler):
-    def get(self):
-        template_values = {
-                'random': randint(0, 1),
-                }
-        path = os.path.join(os.path.dirname(__file__), 'about.html' )
-        self.response.out.write(template.render(path, template_values))
-
-class ContactPage(webapp2.RequestHandler):
-    def get(self):
-        template_values = {
-                'random': randint(0, 1),
-                }
-        path = os.path.join(os.path.dirname(__file__), 'contact.html' )
-        self.response.out.write(template.render(path, template_values))
-
-class SchedulePage(webapp2.RequestHandler):
-    def get(self):
-        template_values = {
-                'random': randint(0, 1),
-                }
-        path = os.path.join(os.path.dirname(__file__), 'schedule-and-pricing.html' )
         self.response.out.write(template.render(path, template_values))
 
 class ClassesPage(webapp2.RequestHandler):
@@ -93,11 +54,34 @@ class GalleryPage(webapp2.RequestHandler):
                 }
         path = os.path.join(os.path.dirname(__file__), 'student_gallery.html' )
         self.response.out.write(template.render(path, template_values))
-
-app = webapp2.WSGIApplication([('/', MainPage),
-                              ('/about', AboutPage),
-                              ('/contact', ContactPage),
-                              ('/art-classes', ClassesPage),
-                              ('/student_gallery', GalleryPage),
-                              ('/schedule', SchedulePage)],
+#incomplete - finish if needed
+def LogIn():
+    user = users.get_current_user()
+    if user:
+        greeting = ("<div class=\"signed-in\"> %s <a class=\"sign-out\" href=\"%s\">(sign out)</a></div>" %
+                    (user.nickname(), users.create_logout_url("/")))
+        template_values = {
+                'greeting': greeting,
+                'user': user.nickname(),
+                }
+    else:
+        greeting = ("<a class=\"sign-in\" href=\"%s\">Sign in or register</a>" %
+                    users.create_login_url("/"))
+        template_values = {
+                'greeting': greeting,
+                }
+    return
+    
+app = webapp2.WSGIApplication([('/', GetPage),
+                              ('/home', GetPage),
+                              ('/about', GetPage),
+                              ('/contact', GetPage),
+                              ('/schedule', GetPage),
+                              ('/pricing', GetPage),
+                              ('/art-classes-children', GetPage),
+                              ('/art-classes-teens', GetPage),
+                              ('/art-classes-adults', GetPage),
+                              ('/gallery', GetPage)],
                                debug=True)
+
+                              

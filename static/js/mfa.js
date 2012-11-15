@@ -1,9 +1,9 @@
 ﻿
 
 $(document).ready(function () {
+
   var ajaxContentReady = function () {
     console.log('contentReady');
-    // stub
   };
 
   ajaxContentReady();
@@ -61,10 +61,11 @@ $(document).ready(function () {
   });
 
   // navigation link handler
-  $('body').on('click', 'a:not(.btn)', function(e) {
+  $('body').on('click', 'a:not(.btn, [class="dropdown-toggle"])', function(e) {
    console.log('Navlink');
       var urlPath = $(this).attr('href');
       var title = $(this).text();
+      $('.dropdown.open .dropdown-toggle').dropdown('toggle');
       History.pushState({urlPath: urlPath}, title, urlPath);
       return false; // prevents default click action of <a ...>
   });
