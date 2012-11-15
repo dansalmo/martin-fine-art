@@ -61,11 +61,12 @@ $(document).ready(function () {
   });
 
   // navigation link handler
-  $('body').on('click', 'a:not(.btn, [class="dropdown-toggle"])', function(e) {
+  $('body').on('click', 'a:not(.btn-navbar, .dropdown-toggle)', function(e) {
    console.log('Navlink');
       var urlPath = $(this).attr('href');
       var title = $(this).text();
       $('.dropdown.open .dropdown-toggle').dropdown('toggle');
+      $('html, body').animate({ scrollTop: 0 }, 'slow');
       History.pushState({urlPath: urlPath}, title, urlPath);
       return false; // prevents default click action of <a ...>
   });

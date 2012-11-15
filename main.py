@@ -39,21 +39,6 @@ class GetPage(webapp2.RequestHandler):
         path = os.path.join(os.path.dirname(__file__), 'index-template.html' )
         self.response.out.write(template.render(path, template_values))
 
-class ClassesPage(webapp2.RequestHandler):
-    def get(self):
-        template_values = {
-                'random': randint(0, 1),
-                }
-        path = os.path.join(os.path.dirname(__file__), 'art-classes.html' )
-        self.response.out.write(template.render(path, template_values))
-
-class GalleryPage(webapp2.RequestHandler):
-    def get(self):
-        template_values = {
-                'random': randint(0, 1),
-                }
-        path = os.path.join(os.path.dirname(__file__), 'student_gallery.html' )
-        self.response.out.write(template.render(path, template_values))
 #incomplete - finish if needed
 def LogIn():
     user = users.get_current_user()

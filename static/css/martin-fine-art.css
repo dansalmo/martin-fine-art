@@ -56,24 +56,29 @@ div[class*="side-bar"]{
   border-width: 1px;
   border-color: #888;
  }
-.description-box{
-
-}
-.description-box h1, h2, h3{
-  margin: 0px;
-  padding: 0px;
-  color: #000;
+.class-description {
   font-family: Trebuchet MS, Helvetica, sans-serif;
-  font-size: 16px;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: auto;
+}
+
+.class-description h1{
+  font-size: 36px;
   font-weight: bold;
-
 }
-.description-box p{
-  color: #333;
-  font-family: Trebuchet MS, Helvetica, sans-serif;
-  font-size: 12px;
+.class-description h2{
+  margin-bottom: 0px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 22px;
 }
-
+.class-description h3{
+  margin: 0px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+}
 .tags {
   color: #000;
   font-family: Trebuchet MS, Helvetica, sans-serif;
