@@ -61,7 +61,7 @@ $(document).ready(function () {
   });
 
   // navigation link handler
-  $('body').on('click', 'a:not(.btn-navbar, .dropdown-toggle)', function(e) {
+  $('body').on('click', 'a:not(.no-ajax, .btn-navbar, .dropdown-toggle)', function(e) {
    console.log('Navlink');
       var urlPath = $(this).attr('href');
       var title = $(this).text();

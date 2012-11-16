@@ -57,16 +57,7 @@ def LogIn():
                 }
     return
     
-app = webapp2.WSGIApplication([('/', GetPage),
-                              ('/home', GetPage),
-                              ('/about', GetPage),
-                              ('/contact', GetPage),
-                              ('/schedule', GetPage),
-                              ('/pricing', GetPage),
-                              ('/art-classes-children', GetPage),
-                              ('/art-classes-teens', GetPage),
-                              ('/art-classes-adults', GetPage),
-                              ('/gallery', GetPage)],
+app = webapp2.WSGIApplication([(r'.*', GetPage),],
                                debug=True)
 
                               
