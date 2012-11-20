@@ -29,6 +29,11 @@ class GetPage(webapp2.RequestHandler):
     def get(self):
         if self.request.path == '/':
           return self.redirect('/home')
+        if self.request.path == '/Art_classes_for_adults.html':
+          return self.redirect('/art-classes-adults')
+        if self.request.path == '/Art_Classes_for_Children.html':
+          return self.redirect('/art-classes-children')
+
 
         page = self.request.path[1:]
         template_values = {
