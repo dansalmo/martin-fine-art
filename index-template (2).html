@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>PureFn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minimal Functional Programming Environment">
+    <meta name="keywords" content="Functional Programming, Lambda Calculus, Combinators">
+    <meta name="martin fine art classes" content="instruction in drawing and painting">    <meta name="author" content="Dan Salmonsen">
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://PureFn-appspot.com"/>
+    <meta property="og:image" content="None"/>
+    <meta property="og:site_name" content="PureFn"/>
+    <meta property="og:description" content="A simple blank slate with a minimal syntax for defining a functional programming language from scratch"/>
+
+    <!-- Le styles -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 0px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../static/css/martin-fine-art.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../static/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../static/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../static/ico/apple-touch-icon-57-precomposed.png">
+    
+    <!-- Google Analytics tracking
+    ================================================== -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36365013-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageview', '/home']);
+    _gaq.push(['_trackPageview', '/about']);
+    _gaq.push(['_trackPageview', '/contact']);
+    _gaq.push(['_trackPageview', '/art-classes-adults']);
+    _gaq.push(['_trackPageview', '/art-classes-children']);
+    _gaq.push(['_trackPageview', '/art-classes-teens']);
+    _gaq.push(['_trackPageview', '/art-classes-core']);
+    _gaq.push(['_trackPageview', '/schedule']);
+    _gaq.push(['_trackPageview', '/pricing']);
+    _gaq.push(['_trackPageview', '/student-gallery']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    </script>
+  </head>
+
+  <body>
+    <div class="logo">
+      <a href="/home"><img alt="PureFn logo" src="../static/img/PureFn-logo.png" height="70%" width="70%"></a>
+    </div>  
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/"></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/home">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="content">
+        <div id="{{content_id|safe}}">{{content|safe}}</div>
+      </div>
+    </div> <!-- /container -->
+    <div id="ajax_content" class="hidden"></div>
+    <hr>
+
+    <footer>
+      <p>© Dan Salmonnsen 2013</p>
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/js/jquery.js"></script>
+		<script src='../static/js/jquery.history.js'></script>
+    <script src="../static/js/bootstrap.js"></script>
+    <script src="../static/js/pa.js"></script>
+
+  
+
+</body></html>

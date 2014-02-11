@@ -4,8 +4,11 @@ body{
   background-color: white;  
  }
 .banner{
-
- }
+}
+footer {
+  margin-left: 20px;
+  margin-left: 20px;
+}
  .logo img{
   display: block;
   margin-left: auto;

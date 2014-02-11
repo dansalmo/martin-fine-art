@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <title>Martin Fine Art Classes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Martin Fine Art Classes provides high quality personalized drawing and painting instruction emphasizing mastery of the foundational mechanical and perceptional skills needed in order for either children or adults to create fine representational art">
+    <meta name="description" content="Martin Fine Art Classes provides high quality art lessons for children, teens and adults.  Personalized drawing and painting instruction emphasize mastery of the foundational mechanical and perceptional skills needed in order for children or adults to create fine representational art">
     <meta name="keywords" content="art art classes art instructionadults kids personalized drawing painting watercolor">
     <meta name="martin fine art classes" content="instruction in drawing and painting">    <meta name="author" content="Dan Salmonsen">
     <meta property="og:type" content="website"/>
@@ -21,6 +21,7 @@
       }
     </style>
     <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../static/css/easybox/styles/default/easybox.min.css" type="text/css" media="screen" rel="stylesheet">
     <link href="../static/css/martin-fine-art.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -59,9 +60,18 @@
     })();
 
     </script>
+    
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <div class="logo">
       <a href="/"><img alt="Martin Fine Art Classes logo" src="../static/img/martin-fine-art-logo.png" height="70%" width="70%"></a>
     </div>  
@@ -98,6 +108,7 @@
     </div>
 
     <div class="container">
+    <div class="fb-like" data-href="http://www.martinfineartclasses.com" data-send="true" data-width="450" data-show-faces="false"></div>
       <div id="content">
         <div id="{{content_id|safe}}">{{content|safe}}</div>
       </div>
@@ -106,6 +117,8 @@
     <hr>
 
     <footer>
+     <h4>Providing quality art lessons to the North County areas of Encinitas, Carlsbad, Vista, Oceanside, Leucadia, Solana Beach, Cardiff, and Rancho Santa Fe</h4>
+
       <p>© Martin Fine Art Lessons 2012</p>
     </footer>
 
@@ -113,8 +126,10 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../static/js/jquery.js"></script>
-		<script src='../static/js/jquery.history.js'></script>
+	<script src='../static/js/jquery.history.js'></script>
     <script src="../static/js/bootstrap.js"></script>
+    <script src="../static/js/jquery.fitvids.js"></script>
+    <script src="../static/js/easybox/distrib.min.js"></script>
     <script src="../static/js/mfa.js"></script>
 
   

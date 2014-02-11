@@ -3,6 +3,8 @@
 $(document).ready(function () {
 
   var ajaxContentReady = function () {
+      // Fits videos in fluid grid
+    $(".hero-unit").fitVids({ customSelector: "object[src^='/']"});
     console.log('contentReady');
   };
 
@@ -25,6 +27,8 @@ $(document).ready(function () {
   }
 
   var loadAjaxContent = function(target, urlBase, selector) {
+  // retrieves #selector from server and places appends it to #target
+  // sets class="hidden" for all siblings in target 
       $('#ajax_content').load(urlBase + ' ' + selector, function(response, status, xhr) {
           if (status == "error") {
             var msg = '<div id="' + selector.substring(1) + '">You must <a href="' + $('#not-signed-in').attr('href') + '">Sign in or register</a> to use this feature</div>';

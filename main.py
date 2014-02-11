@@ -62,7 +62,8 @@ def LogIn():
                 }
     return
     
-app = webapp2.WSGIApplication([(r'.*', GetPage),],
+app = webapp2.WSGIApplication([('robots.txt', GetPage),
+                               (r'.*', GetPage)],
                                debug=True)
 
                               
