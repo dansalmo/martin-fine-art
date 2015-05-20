@@ -29,11 +29,6 @@ class GetPage(webapp2.RequestHandler):
     def get(self):
         if self.request.path == '/':
           return self.redirect('/home')
-        if self.request.path == '/Art_classes_for_adults.html':
-          return self.redirect('/art-classes-adults')
-        if self.request.path == '/Art_Classes_for_Children.html':
-          return self.redirect('/art-classes-children')
-
 
         page = self.request.path[1:]
         template_values = {
@@ -41,27 +36,9 @@ class GetPage(webapp2.RequestHandler):
                 'content_id': page,
                 }
 
-        path = os.path.join(os.path.dirname(__file__), 'index-template.html' )
+        path = os.path.join(os.path.dirname(__file__), 'index.html' )
         self.response.out.write(template.render(path, template_values))
-
-#incomplete - finish if needed
-def LogIn():
-    user = users.get_current_user()
-    if user:
-        greeting = ("<div class=\"signed-in\"> %s <a class=\"sign-out\" href=\"%s\">(sign out)</a></div>" %
-                    (user.nickname(), users.create_logout_url("/")))
-        template_values = {
-                'greeting': greeting,
-                'user': user.nickname(),
-                }
-    else:
-        greeting = ("<a class=\"sign-in\" href=\"%s\">Sign in or register</a>" %
-                    users.create_login_url("/"))
-        template_values = {
-                'greeting': greeting,
-                }
-    return
-    
+   
 app = webapp2.WSGIApplication([('robots.txt', GetPage),
                                (r'.*', GetPage)],
                                debug=True)
