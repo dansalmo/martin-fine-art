@@ -8,6 +8,13 @@ $(document).ready(function () {
     console.log('contentReady');
   };
 
+  // colapse touch menu when link is clicked
+  var navMain = $(".navbar-collapse");
+
+  navMain.on("click", "a", null, function () {
+     navMain.collapse('hide');
+  });
+
   ajaxContentReady();
   // If signed in, append a publish comment button when comment text is clicked.
   var updateNav = function(urlPath) {
