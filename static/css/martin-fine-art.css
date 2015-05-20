@@ -1,4 +1,4 @@
-/*    <!-- The Art Crive Archive styles -->  */
+/*    <!-- Martin Fine Art styles -->  */
 
 body{
   background-color: white;  
@@ -97,4 +97,52 @@ div[class*="side-bar"]{
   color: #333;
   font-family: Trebuchet MS, Helvetica, sans-serif;
   font-size: 12px;
+}
+
+.schedule h3 {
+  text-align: center;
+}
+
+.schedule p {
+  margin-top: 14pt;
+  font-size: 14pt;
+  text-align: center;
+}
+
+.schedule .camp-info {
+  margin-top: 14pt;
+  font-size: 14pt;
+  text-align: center;
+}
+
+.schedule ul {
+  display:table; 
+  margin:0 auto; 
+  font-size: 12pt; 
+  text-align: left;
+}
+
+.schedule table {
+  border-collapse: collapse;
+  border: 1pt solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.schedule tr {
+  height: 60px;
+}
+
+.schedule td {
+  margin: 40px;
+  border: 1pt solid;
+  padding: 8px;
+  font-size: 14pt;
+}
+
+.schedule td p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 11pt;
+  text-align: left;
 }
