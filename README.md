@@ -1,4 +1,4 @@
-#A very simple Google App Engine Ajax web site using Bootstrap
+##A very simple responsive Ajax web site using Google App Engine, Bootstrap and history.js
 
 To run local server:
 
