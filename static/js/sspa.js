@@ -16,7 +16,7 @@ $(document).ready(function () {
   });
 
   ajaxContentReady();
-  // If signed in, append a publish comment button when comment text is clicked.
+
   var updateNav = function(urlPath) {
   $('a[href="' + urlPath + '"]').parent().addClass('active').siblings('.active').removeClass('active');
   };
